@@ -5,8 +5,11 @@ var number = 1;
 var add = 235;
 var song;
 
+function preload() {
+  song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
+}
+
 function setup() {
-  song = loadSound('payday.mp3');
   createCanvas(1350, 645);
   colorMode(RGB);
   gravity = createVector(0, 0.15);
@@ -14,16 +17,13 @@ function setup() {
   strokeWeight(4);
   background(0);
   textFont("sans-serif", 30);
+  song.loop():
 }
 
 function draw() {
   background(0);
   fire();
   coutUp();
-}
-
-function mousePressed() {
-  song.play();
 }
 
 function fire() {
