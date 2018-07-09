@@ -3,10 +3,12 @@ var gravity;
 var time = 1;
 var number = 1;
 var add = 235;
+var song;
+var font1;
 
 function preload() {
-  var song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
-  var font1 = loadFont("https://mtinfinity.github.io/Minfinity/AmaticSCRegular.ttf");
+  song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
+  font1 = loadFont("https://mtinfinity.github.io/Minfinity/AmaticSCRegular.ttf");
 }
 
 function setup() {
