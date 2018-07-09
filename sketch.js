@@ -17,7 +17,7 @@ function setup() {
   strokeWeight(4);
   background(0);
   textFont("sans-serif", 30);
-  song.loop():
+  song.loop();
 }
 
 function draw() {
