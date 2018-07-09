@@ -1,2 +1,2 @@
-# infinity.github.io
-My colection of deb file...
+# Minfinity
+Welcome to my workspace !
