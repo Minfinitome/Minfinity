@@ -8,7 +8,7 @@ var font1;
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
-  font1 = loadFont("https://mtinfinity.github.io/Minfinity/AmaticSCRegular.ttf");
+  font1 = loadFont("https://mtinfinity.github.io/Minfinity/Moonlight_R.otf");
 }
 
 function setup() {
@@ -26,6 +26,7 @@ function draw() {
   background(0);
   fire();
   coutUp();
+  time += 1;
 }
 
 function fire() {
@@ -45,17 +46,15 @@ function fire() {
 }
 
 function coutUp() {
+  noStroke();
+  fill(random(150,255));
   if(time < 1200) {
-    time += 1;
     text("Starting at 27 - 01 - 2016", 100, 100);
-    if(time > 600) text("Today is 07 - 10 - 2018 ...", 100, 120);
+    if(time > 600) text("Today is 07 - 10 - 2018 ...", 100, 130);
   }
   else if(time < 5000) {
-	time += 1;
-	noStroke();
-	fill(255);
 	text(number, 100, windowHeight/5);
-	if(number > 365) text("a year", windowWidth/5, windowHeight*2/5 - 50);
+	if(number > 365) text("a long year", windowWidth/5, windowHeight*2/5 - 50);
 	if(number >= 600) text("days", windowWidth*2/5, windowHeight*2/5 - 50);	
 	if(number >= 600) text("+   " + add, windowWidth*1.5/5, windowHeight*2/5 - 50);
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
