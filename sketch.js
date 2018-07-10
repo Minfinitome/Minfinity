@@ -18,7 +18,7 @@ function setup() {
   stroke(255);
   strokeWeight(4);
   background(0);
-  textFont("sans-serif", 30);
+  textFont("font1", 30);
   song.loop();
 }
 
@@ -45,10 +45,16 @@ function fire() {
 }
 
 function coutUp() {
+  if(time < 1200) {
+    time += 1;
+    text("Starting at 27 - 01 - 2016", 100, 100);
+    if(time > 600) text("Today is 07 - 10 - 2018 ...", 100, 120);
+  }
+  else if(time < 5000) {
 	time += 1;
 	noStroke();
 	fill(255);
-	text(number, windowWidth/5, windowHeight/5);
+	text(number, 100, windowHeight/5);
 	if(number > 365) text("a year", windowWidth/5, windowHeight*2/5 - 50);
 	if(number >= 600) text("days", windowWidth*2/5, windowHeight*2/5 - 50);	
 	if(number >= 600) text("+   " + add, windowWidth*1.5/5, windowHeight*2/5 - 50);
@@ -64,6 +70,7 @@ function coutUp() {
 	else if(number < 605) {if(time % 20 == 0) {number += 1; add += 1;}}
 	else if(number < 610 ) {if(time % 30 == 0) {number += 1; add +=1;}}
 	else if(number <= 617) {if(time % 50 == 0) {number += 1; add += 1;}}
-	else {number = 618; add = 253;}
+  else {number = 618; add = 253;}
+  }
 }
 
