@@ -18,7 +18,6 @@ function setup() {
   stroke(255);
   strokeWeight(4);
   background(0);
-  textFont("font1", 30);
   song.loop();
 }
 
@@ -46,13 +45,14 @@ function fire() {
 }
 
 function coutUp() {
+  textFont("font1", 30);
   noStroke();
   fill(random(150,255));
   if(time < 1200) {
     text("Starting at 27 - 01 - 2016", 100, 100);
     if(time > 600) text("Today is 07 - 10 - 2018 ...", 100, 130);
   }
-  else if(time < 5000) {
+  else if(time < 3000) {
 	text(number, 100, windowHeight/5);
 	if(number > 365) text("a long year", windowWidth/5, windowHeight*2/5 - 50);
 	if(number >= 600) text("days", windowWidth*2/5, windowHeight*2/5 - 50);	
@@ -65,9 +65,9 @@ function coutUp() {
 	else if(number <= 400) {if(time % 1 == 0) number += 4;}
 	else if(number <= 500) {if(time % 2 == 0) number += 3;}
 	else if(number <= 550) {if(time % 3 == 0) number += 2;}
-	else if(number < 600) {if(time % 7 == 0) number += 2;}
-	else if(number < 605) {if(time % 20 == 0) {number += 1; add += 1;}}
-	else if(number < 610 ) {if(time % 30 == 0) {number += 1; add +=1;}}
+	else if(number <= 600) {if(time % 7 == 0) number += 2;}
+	else if(number <= 605) {if(time % 20 == 0) {number += 1; add += 1;}}
+	else if(number <= 610 ) {if(time % 30 == 0) {number += 1; add +=1;}}
 	else if(number <= 617) {if(time % 50 == 0) {number += 1; add += 1;}}
   else {number = 618; add = 253;}
   }
