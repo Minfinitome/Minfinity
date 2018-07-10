@@ -52,11 +52,11 @@ function coutUp() {
     text("Starting at 27 - 01 - 2016", 100, 100);
     if(time > 600) text("Today is 07 - 10 - 2018 ...", 100, 130);
   }
-  else if(time < 3000) {
+  else if(time < 2000) {
 	text(number, 100, windowHeight/5);
 	if(number > 365) text("a long year", windowWidth/5, windowHeight*2/5 - 50);
 	if(number >= 600) text("days", windowWidth*2/5, windowHeight*2/5 - 50);	
-	if(number >= 600) text("+   " + add, windowWidth*1.5/5, windowHeight*2/5 - 50);
+	if(number >= 600) text("with extra   " + add, windowWidth*1.5/5, windowHeight*2/5 - 50);
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
 	else if(number <= 100) {if(time % 4 == 0) number += 1;}
 	else if(number <= 150) {if(time % 4 == 0) number += 3;}
