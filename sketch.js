@@ -8,7 +8,7 @@ var font1;
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
-  font1 = loadFont("https://fonts.googleapis.com/css?family=Pacifico");
+  font1 = loadFont("https://mtinfinity.github.io/Minfinity/ShadowsIntoLight.ttf");
 }
 
 function setup() {
@@ -45,7 +45,7 @@ function fire() {
 }
 
 function coutUp() {
-  textFont("font1", 30);
+  textFont("font1", 20);
   noStroke();
   fill(random(150,255));
   if(time < 1200) {
@@ -54,7 +54,7 @@ function coutUp() {
   }
   else if(time < 2000) {
 	text(number, 100, windowHeight/5);
-	if(number > 365) text("a long year", windowWidth/5, windowHeight*2/5 - 50);
+	if(number > 365) text("một năm dài", windowWidth/5, windowHeight*2/5 - 50);
 	if(number >= 600) text("days", windowWidth*2/5, windowHeight*2/5 - 50);	
 	if(number >= 600) text("with extra   " + add, windowWidth*1.5/5, windowHeight*2/5 - 50);
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
