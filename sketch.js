@@ -8,7 +8,7 @@ var font1;
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
-  font1 = loadFont("https://mtinfinity.github.io/Minfinity/Moonlight_R.otf");
+  font1 = loadFont("https://fonts.googleapis.com/css?family=Pacifico");
 }
 
 function setup() {
