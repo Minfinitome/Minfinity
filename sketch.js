@@ -19,7 +19,6 @@ var exrow = 30;
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
-  font1 = loadFont("https://mtinfinity.github.io/Minfinity/ShadowsIntoLight.ttf");
 }
 
 function setup() {
@@ -39,7 +38,7 @@ function draw() {
 }
 
 function fire() {
-  colorMode(HSB);
+  colorMode(RGB);
   if (random(1) < 0.1) {
     fireworks.push(new Firework());
   }
@@ -62,9 +61,8 @@ function coutUp() {
   if(time > 600) displayText("Hôm nay đã là 07-10-2018 ...", 100, 130, 1);
   if(time > 1200) {
 	text(number + " ngày", 100, 100 + exrow*2);
-	if(number >= 365) text("một năm", column, 100 + exrow*3);
-  if(number >= 600) { text("ngày nữa !", column*4, 100 + exrow*3); 
-                      text("cùng với " + add, column*2, 100 + exrow*3);}
+	if(number >= 365) displayText("một năm", column, 100 + exrow*3, 2);
+  if(number >= 600) text("cộng thêm với " + add, column*2, 100 + exrow*3);
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
 	else if(number <= 100) {if(time % 4 == 0) number += 1;}
 	else if(number <= 150) {if(time % 4 == 0) number += 3;}
@@ -77,7 +75,7 @@ function coutUp() {
 	else if(number <= 605) {if(time % 20 == 0) {number += 1; add += 1;}}
 	else if(number <= 610 ) {if(time % 30 == 0) {number += 1; add +=1;}}
 	else if(number <= 617) {if(time % 50 == 0) {number += 1; add += 1;}}
-  else {number = 618; add = 253;}
+  else {number = 618; add = 253; text("ngày nữa !", column*4, 100 + exrow*3);}
   }
 }
 
