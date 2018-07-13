@@ -84,9 +84,9 @@ function displayText(n, x, y, de) {
   noStroke();
   fill(255);
   textSize(25);
-  text(n.substring(0, _pos[de] + 1), x + _incre[de], y);
-  _pos[de]++; _incre[de] += 2;
-  if(_pos > n.length) {_pos = 0; _incre = 0;}
+  text(n.substring(0, _pos[de] + 1), x, y);
+  _pos[de]++;
+  if(_pos[de] > n.length) _pos[de] = 0;
 }
 
 
