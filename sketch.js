@@ -1,13 +1,21 @@
+// bien trong clip
 var fireworks = [];
 var gravity;
 var time = 1;
 var number = 1;
 var add = 235;
+
+// bien cua preLoad
 var song;
 var font1;
+
+// bien lam nhiem vu displayText
 var _pos = [100];
-var _incre = [100];
-for(var i = 0; i< 101; i++) {_pos[i] = 1; _incre[i] = 0;}
+for(var i = 0; i< 101; i++) _pos[i] = 1;
+
+// bien hien thi text
+var column = 100;
+var row;
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
@@ -48,18 +56,16 @@ function fire() {
 
 function coutUp() {
   textFont("font1");
-  noStroke();
-  fill(random(150,255));
+  stroke(150);
+  fill(255);
   textSize(25);
-  if(time < 1200) {
-    displayText("Bắt đầu từ 27-01-2016", 100, 100, 0);
-    if(time > 600) text("Hôm nay đã là 07-10-2018 ...", 100, 130);
-  }
-  else if(time < 2600) {
-	text(number, 100, windowHeight/5);
-	if(number > 365) text("một năm", windowWidth/5, windowHeight*2/5 - 50);
-  if(number >= 600) { text("days", windowWidth*2/5, windowHeight*2/5 - 50); 
-                      text("with extra   " + add, windowWidth*1.5/5, windowHeight*2/5 - 50);}
+  displayText("Bắt đầu từ 27-01-2016", 100, 100, 0);
+  if(time > 600) displayText("Hôm nay đã là 07-10-2018 ...", 100, 130);
+  if(time > 1200) {
+	text(number + "ngày", 100, windowHeight/5);
+	if(number >= 365) text("một năm", column, windowHeight*2/5 - 50);
+  if(number >= 600) { text("ngày nữa !", column*3, windowHeight*2/5 - 50); 
+                      text("cùng với " + add, column*2, windowHeight*2/5 - 50);}
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
 	else if(number <= 100) {if(time % 4 == 0) number += 1;}
 	else if(number <= 150) {if(time % 4 == 0) number += 3;}
@@ -78,7 +84,7 @@ function coutUp() {
 
 function displayText(n, x, y, z) {
   //textFont("font1"); 
-  noStroke();
+  stroke(150);
   fill(255);
   textSize(25);
   text(n.substring(0, _pos[z]), x, y);
