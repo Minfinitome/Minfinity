@@ -7,10 +7,7 @@ var song;
 var font1;
 var _pos = [100];
 var _incre = [100];
-for(var i = 0; i< 101; i++) {
-  _pos[i] = 0;
-  _incre[i] = 0;
-}
+for(var i = 0; i< 101; i++) {_pos[i] = 1; _incre[i] = 0;}
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
@@ -60,9 +57,9 @@ function coutUp() {
   }
   else if(time < 2600) {
 	text(number, 100, windowHeight/5);
-	if(number > 365) text("một năm dài", windowWidth/5, windowHeight*2/5 - 50);
-	if(number >= 600) text("days", windowWidth*2/5, windowHeight*2/5 - 50);	
-	if(number >= 600) text("with extra   " + add, windowWidth*1.5/5, windowHeight*2/5 - 50);
+	if(number > 365) text("một năm", windowWidth/5, windowHeight*2/5 - 50);
+  if(number >= 600) { text("days", windowWidth*2/5, windowHeight*2/5 - 50); 
+                      text("with extra   " + add, windowWidth*1.5/5, windowHeight*2/5 - 50);}
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
 	else if(number <= 100) {if(time % 4 == 0) number += 1;}
 	else if(number <= 150) {if(time % 4 == 0) number += 3;}
@@ -79,14 +76,14 @@ function coutUp() {
   }
 }
 
-function displayText(n, x, y, de) {
+function displayText(n, x, y, z) {
   //textFont("font1"); 
   noStroke();
   fill(255);
   textSize(25);
-  text(n.substring(0, _pos[de] + 1), x, y);
-  _pos[de]++;
-  if(_pos[de] > n.length) _pos[de] = 0;
+  text(n.substring(0, _pos[z]), x, y);
+  if(_pos[z] < n.length) _pos[z]++;
+  else _pos[z] = n.length; 
 }
 
 
