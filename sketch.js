@@ -55,8 +55,8 @@ function coutUp() {
   fill(random(150,255));
   textSize(25);
   if(time < 1200) {
-  displayText("Bắt đầu từ 27-01-2016", 100, 100, 0);
-  if(time > 600) text("Hôm nay đã là 07-10-2018 ...", 100, 130);
+    displayText("Bắt đầu từ 27-01-2016", 100, 100, 0);
+    if(time > 600) text("Hôm nay đã là 07-10-2018 ...", 100, 130);
   }
   else if(time < 2600) {
 	text(number, 100, windowHeight/5);
@@ -84,7 +84,7 @@ function displayText(n, x, y, de) {
   noStroke();
   fill(255);
   textSize(25);
-  text(n.substring(_pos[de], _pos[de] + 1), x + _incre[de], y);
+  text(n.substring(0, _pos[de] + 1), x + _incre[de], y);
   _pos[de]++; _incre[de] += 2;
   if(_pos > n.length) {_pos = 0; _incre = 0;}
 }
