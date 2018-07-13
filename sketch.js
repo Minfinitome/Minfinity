@@ -57,12 +57,12 @@ function coutUp() {
   textFont("Amatic SC", 25);
   noStroke();
   fill(255);
-  displayText("Bắt đầu từ 27-01-2016", 100, 100, 0);
+  displayText("Bắt đầu từ 27-01-2017", 100, 100, 0);
   if(time > 600) displayText("Hôm nay đã là 07-10-2018 ...", 100, 130, 1);
   if(time > 1200) {
 	text(number + " ngày", 100, 100 + exrow*2);
 	if(number >= 365) displayText("một năm", column, 100 + exrow*3, 2);
-  if(number >= 600) text("cộng thêm với " + add, column*2, 100 + exrow*3);
+  if(number >= 600) text("cộng thêm với " + add, column*2 - 50, 100 + exrow*3);
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
 	else if(number <= 100) {if(time % 4 == 0) number += 1;}
 	else if(number <= 150) {if(time % 4 == 0) number += 3;}
@@ -75,7 +75,7 @@ function coutUp() {
 	else if(number <= 605) {if(time % 20 == 0) {number += 1; add += 1;}}
 	else if(number <= 610 ) {if(time % 30 == 0) {number += 1; add +=1;}}
 	else if(number <= 617) {if(time % 50 == 0) {number += 1; add += 1;}}
-  else {number = 618; add = 253; text("ngày nữa !", column*4, 100 + exrow*3);}
+  else {number = 618; add = 253; text("ngày nữa !", column*3, 100 + exrow*3);}
   }
 }
 
