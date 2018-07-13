@@ -55,15 +55,15 @@ function fire() {
 }
 
 function coutUp() {
-  stroke(255);
-  noFill();
+  noStroke();
+  fill(255);
   textSize(25);
   displayText("Bắt đầu từ 27-01-2016", 100, 100, 0);
   if(time > 600) displayText("Hôm nay đã là 07-10-2018 ...", 100, 130);
   if(time > 1200) {
-	text(number + "ngày", 100, 160);
+	text(number + " ngày", 100, 160);
 	if(number >= 365) text("một năm", column, windowHeight*2/5 - 50);
-  if(number >= 600) { text("ngày nữa !", column*3, windowHeight*2/5 - 50); 
+  if(number >= 600) { text("ngày nữa !", column*4, windowHeight*2/5 - 50); 
                       text("cùng với " + add, column*2, windowHeight*2/5 - 50);}
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
 	else if(number <= 100) {if(time % 4 == 0) number += 1;}
@@ -82,8 +82,8 @@ function coutUp() {
 }
 
 function displayText(n, x, y, z) {
-  stroke(255);
-  noFill();
+  noStroke();
+  fill(255);
   textSize(25);
   text(n.substring(0, _pos[z]), x, y);
   if(_pos[z] < n.length) _pos[z]++;
