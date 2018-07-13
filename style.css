@@ -1,0 +1,11 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Patrick Hand', cursive;
+    font-family: 'Pacifico', cursive;
+}
