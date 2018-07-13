@@ -15,7 +15,7 @@ for(var i = 0; i< 101; i++) _pos[i] = 1;
 
 // bien hien thi text
 var column = 100;
-var row;
+var exrow = 30;
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
@@ -55,7 +55,7 @@ function fire() {
 }
 
 function coutUp() {
-  textFont("font1");
+  //textFont("font1");
   stroke(150);
   fill(255);
   textSize(25);
