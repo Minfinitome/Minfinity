@@ -33,7 +33,7 @@ function setup() {
 function draw() {
   background(0);
   fire();
-  coutUp();
+  if(time > 900) coutUp();
   textOnScreen();
   time += 1;
 }
@@ -84,18 +84,18 @@ function textOnScreen() {
   noStroke();
   fill(255);
   if(time < 400)
-    displayText("Hey ...", 100, 100, 0);
+    displayText("Hey ...", column, 100, 0);
   if(time > 200 && time < 400)
-    displayText("Let's begin a short journey ...", 100, 100+exrow, 1);
+    displayText("Let's begin a short journey ...", column, 100 + exrow, 1);
   if(time > 400)
-    displayText("Bắt đầu từ 27-01-2017", 100, 100, 2);
+    displayText("Bắt đầu từ 27-01-2017", column, 100, 2);
   if(time > 600) 
-    displayText("Hôm nay đã là 07-10-2018 ...", 100, 100+exrow, 3);
+    displayText("Hôm nay đã là 07-10-2018 ...", column, 100 + exrow, 3);
   if(time > 900) {
-	  text(number + " ngày", 100, 100+exrow*2);
-	  if(number >= 365) displayText("một năm", column, 100+exrow*3, 4);
-    if(number >= 600) text("cộng thêm với " + add, column*2-25, 100+exrow*3);
-    if(number == 618) displayText("ngày nữa !", column*3+25, 100+exrow*3, 5);
+	  text(number + " ngày", column, 100+exrow*2);
+	  if(number >= 365) displayText("một năm", column, 100 + exrow*3, 4);
+    if(number >= 600) text("cộng thêm với " + add, column*3, 100 + exrow*3);
+    if(number == 618) displayText("ngày nữa !", column*4, 100 + exrow*3, 5);
   }
 }
 
