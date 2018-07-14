@@ -77,8 +77,6 @@ function displayText(n, x, y, z) {
   noStroke();
   fill(255);
   textFont("Amatic SC", 40);
-  typing.playMode("sustain");
-  typing.play();
   text(n.substring(0, _pos[z]), x, y);
   if(_pos[z] < n.length) _pos[z]++;
   else _pos[z] = n.length; 
@@ -91,16 +89,18 @@ function textOnScreen() {
   if(time < 400)
     displayText("Hey ...", column, 100, 0);
   if(time > 200 && time < 400)
-    displayText("Let's begin a short journey ...", column, 100 + exrow, 1);
+    displayText("Let's begin a journey ...", column, 100 + exrow, 1);
   if(time > 400)
     displayText("Bắt đầu từ 27-01-2017", column, 100, 2);
   if(time > 600) 
     displayText("Hôm nay đã là 07-10-2018 ...", column, 100 + exrow, 3);
+  if(time > 800)
+    displayText("Thế là đã qua ...", column, 100 + exrow*2, 6)
   if(time > 900) {
-	  text(number + " ngày", column, 100+exrow*2);
-	  if(number >= 365) displayText("một năm...", column, 100 + exrow*3, 4);
-    if(number >= 600) text("cộng thêm với " + add, column*2 + 18, 100 + exrow*3);
-    if(number == 618) displayText("ngày nữa !", column*4 + 34, 100 + exrow*3, 5);
+	  text(number + " ngày", column, 100 + exrow*3);
+	  if(number >= 365) displayText("một năm...", column, 100 + exrow*4, 4);
+    if(number >= 600) text("cộng thêm với " + add, column*2 + 18, 100 + exrow*4);
+    if(number == 618) displayText("ngày nữa !", column*4 + 34, 100 + exrow*4, 5);
   }
 }
 
