@@ -35,6 +35,7 @@ function draw() {
   fire();
   if(time > 900) coutUp();
   textOnScreen();
+  drawHeart();
   time += 1;
 }
 
@@ -94,8 +95,8 @@ function textOnScreen() {
   if(time > 900) {
 	  text(number + " ngày", column, 100+exrow*2);
 	  if(number >= 365) displayText("một năm", column, 100 + exrow*3, 4);
-    if(number >= 600) text("cộng thêm với " + add, column*2, 100 + exrow*3);
-    if(number == 618) displayText("ngày nữa !", column*4, 100 + exrow*3, 5);
+    if(number >= 600) text("cộng thêm với " + add, column*2 + 4, 100 + exrow*3);
+    if(number == 618) displayText("ngày nữa !", column*4 + 10, 100 + exrow*3, 5);
   }
 }
 
