@@ -15,7 +15,7 @@ for(var i = 0; i< 101; i++) _pos[i] = 1;
 
 // bien hien thi text
 var column = 100;
-var exrow = 30;
+var exrow = 45;
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
@@ -91,11 +91,11 @@ function textOnScreen() {
     displayText("Bắt đầu từ 27-01-2017", 100, 100, 2);
   if(time > 600) 
     displayText("Hôm nay đã là 07-10-2018 ...", 100, 100+exrow, 3);
-  if(time > 1200) {
-	  displayText(number + " ngày", 100, 100+exrow*2, 4);
-	  if(number >= 365) displayText("một năm", column, 100+exrow*3, 5);
-    if(number >= 600) displayText("cộng thêm với " + add, column*2-25, 100+exrow*3, 6);
-    if(number == 618) displayText("ngày nữa !", column*3+25, 100+exrow*3, 7);
+  if(time > 900) {
+	  text(number + " ngày", 100, 100+exrow*2);
+	  if(number >= 365) displayText("một năm", column, 100+exrow*3, 4);
+    if(number >= 600) text("cộng thêm với " + add, column*2-25, 100+exrow*3);
+    if(number == 618) displayText("ngày nữa !", column*3+25, 100+exrow*3, 5);
   }
 }
 
