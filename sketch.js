@@ -95,12 +95,12 @@ function textOnScreen() {
   if(time > 600) 
     displayText("Hôm nay đã là 07-10-2018 ...", column, 100 + exrow, 3);
   if(time > 800)
-    displayText("Thế là đã qua ...", column, 100 + exrow*2, 6)
+    displayText("Thế là đã qua ...", column, 100 + exrow*2, 4)
   if(time > 900) {
 	  text(number + " ngày", column, 100 + exrow*3);
-	  if(number >= 365) displayText("một năm ...", column, 100 + exrow*4, 4);
-    if(number >= 600) text("cộng thêm với " + add, column*2 + 26, 100 + exrow*4);
-    if(number == 618) displayText("ngày nữa !", column*4 + 40, 100 + exrow*4, 5);
+	  if(number >= 365) displayText("là một năm ...", column, 100 + exrow*4, 5);
+    if(number >= 600) text("cộng thêm với " + add, column*3, 100 + exrow*4);
+    if(number == 618) displayText("ngày nữa !", column*5, 100 + exrow*4, 6);
   }
 }
 
