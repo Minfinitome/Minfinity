@@ -99,8 +99,8 @@ function textOnScreen() {
   if(time > 900) {
 	  text(number + " ngày", column, 100 + exrow*3);
 	  if(number >= 365) displayText("là một năm ...", column, 100 + exrow*4, 5);
-    if(number >= 600) text("cộng thêm với " + add, column*3 - 8, 100 + exrow*4);
-    if(number == 618) displayText("ngày nữa !", column*5 - 4, 100 + exrow*4, 6);
+    if(number >= 600) text("cộng thêm với " + add, column*3 - 18, 100 + exrow*4);
+    if(number == 618) displayText("ngày nữa !", column*5 - 10, 100 + exrow*4, 6);
   }
 }
 
