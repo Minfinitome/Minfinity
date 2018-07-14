@@ -5,6 +5,7 @@ var time = 1;
 var number = 1;
 var add = 236;
 var heart;
+var typing;
 
 // bien cua preLoad
 var song;
@@ -20,6 +21,7 @@ var exrow = 45;
 
 function preload() {
   song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
+  typing = loadSound("https://mtinfinity.github.io/Minfinity/typing.mp3");
 }
 
 function setup() {
@@ -36,7 +38,6 @@ function draw() {
   fire();
   if(time > 900) coutUp();
   textOnScreen();
-  //drawHeart();
   time += 1;
 }
 
@@ -76,6 +77,8 @@ function displayText(n, x, y, z) {
   noStroke();
   fill(255);
   textFont("Amatic SC", 40);
+  typing.playMode("sustain");
+  typing.play();
   text(n.substring(0, _pos[z]), x, y);
   if(_pos[z] < n.length) _pos[z]++;
   else _pos[z] = n.length; 
@@ -95,13 +98,9 @@ function textOnScreen() {
     displayText("Hôm nay đã là 07-10-2018 ...", column, 100 + exrow, 3);
   if(time > 900) {
 	  text(number + " ngày", column, 100+exrow*2);
-	  if(number >= 365) displayText("một năm", column, 100 + exrow*3, 4);
-    if(number >= 600) text("cộng thêm với " + add, column*2 + 14, 100 + exrow*3);
-    if(number == 618) displayText("ngày nữa !", column*4 + 30, 100 + exrow*3, 5);
+	  if(number >= 365) displayText("một năm...", column, 100 + exrow*3, 4);
+    if(number >= 600) text("cộng thêm với " + add, column*2 + 18, 100 + exrow*3);
+    if(number == 618) displayText("ngày nữa !", column*4 + 34, 100 + exrow*3, 5);
   }
 }
 
-function drawHeart() {
-  heart = new heart();
-  heart.show();
-}
