@@ -4,6 +4,7 @@ var gravity;
 var time = 1;
 var number = 1;
 var add = 235;
+var heart;
 
 // bien cua preLoad
 var song;
