@@ -1,4 +1,4 @@
-// bien trong clip
+// bien trong code
 var fireworks = [];
 var gravity;
 var time = 1;
@@ -39,7 +39,7 @@ function draw() {
 }
 
 function fire() {
-  colorMode(RGB);
+  colorMode(HSB);
   if (random(1) < 0.1) {
     fireworks.push(new Firework());
   }
@@ -94,8 +94,12 @@ function textOnScreen() {
   if(time > 900) {
 	  text(number + " ngày", column, 100+exrow*2);
 	  if(number >= 365) displayText("một năm", column, 100 + exrow*3, 4);
-    if(number >= 600) text("cộng thêm với " + add, column*3, 100 + exrow*3);
+    if(number >= 600) text("cộng thêm với " + add, column*2, 100 + exrow*3);
     if(number == 618) displayText("ngày nữa !", column*4, 100 + exrow*3, 5);
   }
 }
 
+function drawHeart() {
+  heart = new heart();
+  heart.show();
+}
