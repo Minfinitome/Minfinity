@@ -73,29 +73,29 @@ function coutUp() {
 function displayText(n, x, y, z) {
   noStroke();
   fill(255);
-  textFont("Amatic SC", 30);
+  textFont("Amatic SC", 40);
   text(n.substring(0, _pos[z]), x, y);
   if(_pos[z] < n.length) _pos[z]++;
   else _pos[z] = n.length; 
 }
 
 function textOnScreen() {
-  textFont("Amatic SC", 30);
+  textFont("Amatic SC", 40);
   noStroke();
   fill(255);
   if(time < 400)
     displayText("Hey ...", 100, 100, 0);
   if(time > 200 && time < 400)
-    displayText("Hey, let's begin a short journey ...", 100, 130, 0);
+    displayText("Let's begin a short journey ...", 100, 100+exrow, 1);
   if(time > 400)
-    displayText("Bắt đầu từ 27-01-2017", 100, 100, 0);
+    displayText("Bắt đầu từ 27-01-2017", 100, 100, 2);
   if(time > 600) 
-    displayText("Hôm nay đã là 07-10-2018 ...", 100, 130, 1);
+    displayText("Hôm nay đã là 07-10-2018 ...", 100, 100+exrow, 3);
   if(time > 1200) {
-	  displayText(number + " ngày", 100, 100 + exrow*2);
-	  if(number >= 365) displayText("một năm", column, 100 + exrow*3, 2);
-    if(number >= 600) displayText("cộng thêm với " + add, column*2 - 25, 100 + exrow*3);
-    if(number == 618) displayText("ngày nữa !", column*3 + 25, 100 + exrow*3);
+	  displayText(number + " ngày", 100, 100+exrow*2, 4);
+	  if(number >= 365) displayText("một năm", column, 100+exrow*3, 5);
+    if(number >= 600) displayText("cộng thêm với " + add, column*2-25, 100+exrow*3, 6);
+    if(number == 618) displayText("ngày nữa !", column*3+25, 100+exrow*3, 7);
   }
 }
 
