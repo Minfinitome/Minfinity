@@ -34,6 +34,7 @@ function draw() {
   background(0);
   fire();
   coutUp();
+  textOnScreen();
   time += 1;
 }
 
@@ -54,16 +55,6 @@ function fire() {
 }
 
 function coutUp() {
-  textFont("Amatic SC", 30);
-  noStroke();
-  fill(255);
-  displayText("Chào em, " )
-  displayText("Bắt đầu từ 27-01-2017", 100, 100, 0);
-  if(time > 600) displayText("Hôm nay đã là 07-10-2018 ...", 100, 130, 1);
-  if(time > 1200) {
-	text(number + " ngày", 100, 100 + exrow*2);
-	if(number >= 365) displayText("một năm", column, 100 + exrow*3, 2);
-  if(number >= 600) text("cộng thêm với " + add, column*2 - 25, 100 + exrow*3);
 	if(number <= 50) {if(time % 5 == 0) number += 1;}
 	else if(number <= 100) {if(time % 4 == 0) number += 1;}
 	else if(number <= 150) {if(time % 4 == 0) number += 3;}
@@ -76,8 +67,7 @@ function coutUp() {
 	else if(number <= 605) {if(time % 20 == 0) {number += 1; add += 1;}}
 	else if(number <= 610 ) {if(time % 30 == 0) {number += 1; add +=1;}}
 	else if(number <= 617) {if(time % 50 == 0) {number += 1; add += 1;}}
-  else {number = 618; add = 253; text("ngày nữa !", column*3 + 25, 100 + exrow*3);}
-  }
+  else {number = 618; add = 253;}
 }
 
 function displayText(n, x, y, z) {
@@ -89,4 +79,23 @@ function displayText(n, x, y, z) {
   else _pos[z] = n.length; 
 }
 
+function textOnScreen() {
+  textFont("Amatic SC", 30);
+  noStroke();
+  fill(255);
+  if(time < 400)
+    displayText("Hey ...", 100, 100, 0);
+  if(time > 200 && time < 400)
+    displayText("Hey, let's begin a short journey ...", 100, 130, 0);
+  if(time > 400)
+    displayText("Bắt đầu từ 27-01-2017", 100, 100, 0);
+  if(time > 600) 
+    displayText("Hôm nay đã là 07-10-2018 ...", 100, 130, 1);
+  if(time > 1200) {
+	  displayText(number + " ngày", 100, 100 + exrow*2);
+	  if(number >= 365) displayText("một năm", column, 100 + exrow*3, 2);
+    if(number >= 600) displayText("cộng thêm với " + add, column*2 - 25, 100 + exrow*3);
+    if(number == 618) displayText("ngày nữa !", column*3 + 25, 100 + exrow*3);
+  }
+}
 
