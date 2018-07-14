@@ -36,7 +36,7 @@ function draw() {
   fire();
   if(time > 900) coutUp();
   textOnScreen();
-  drawHeart();
+  //drawHeart();
   time += 1;
 }
 
