@@ -3,7 +3,7 @@ var fireworks = [];
 var gravity;
 var time = 1;
 var number = 1;
-var add = 236;
+var add = 237;
 var heart;
 var typing;
 
@@ -98,9 +98,9 @@ function textOnScreen() {
     displayText("Thế là đã qua ...", column, 100 + exrow*2, 6)
   if(time > 900) {
 	  text(number + " ngày", column, 100 + exrow*3);
-	  if(number >= 365) displayText("một năm...", column, 100 + exrow*4, 4);
-    if(number >= 600) text("cộng thêm với " + add, column*2 + 18, 100 + exrow*4);
-    if(number == 618) displayText("ngày nữa !", column*4 + 34, 100 + exrow*4, 5);
+	  if(number >= 365) displayText("một năm ...", column, 100 + exrow*4, 4);
+    if(number >= 600) text("cộng thêm với " + add, column*2 + 26, 100 + exrow*4);
+    if(number == 618) displayText("ngày nữa !", column*4 + 40, 100 + exrow*4, 5);
   }
 }
 
