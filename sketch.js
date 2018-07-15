@@ -14,6 +14,7 @@ var font1;
 // bien lam nhiem vu displayText
 var _pos = [100];
 for(var i = 0; i< 101; i++) _pos[i] = 1;
+var second = 0;
 
 // bien hien thi text
 var column = 100;
@@ -36,9 +37,10 @@ function setup() {
 function draw() {
   background(0);
   fire();
-  if(time > 900) coutUp();
+  if(second > 7) coutUp();
   textOnScreen();
   time += 1;
+  if(time % 250 == 0) second += 1;
 }
 
 function fire() {
@@ -86,21 +88,24 @@ function textOnScreen() {
   textFont("Amatic SC", 40);
   noStroke();
   fill(255);
-  if(time < 400)
+  if(second < 4) {
     displayText("Hey ...", column, 100, 0);
-  if(time > 200 && time < 400)
-    displayText("Let's begin a journey ...", column, 100 + exrow, 1);
-  if(time > 400)
-    displayText("Bắt đầu từ 27-01-2017", column, 100, 2);
-  if(time > 600) 
-    displayText("Hôm nay đã là 07-10-2018 ...", column, 100 + exrow, 3);
-  if(time > 800)
-    displayText("Thế là đã qua ...", column, 100 + exrow*2, 4)
-  if(time > 900) {
-	  text(number + " ngày", column, 100 + exrow*3);
-	  if(number >= 365) displayText("là một năm ...", column, 100 + exrow*4, 5);
-    if(number >= 600) displayText("cộng thêm với " + add + " ngày !", column*3 - 30, 100 + exrow*4, 6);
-    //if(number == 618) displayText("ngày !", column*5 - 12, 100 + exrow*4, 6);
+    if(second > 1) displayText("Let's start a journey ...", column, 100 + exrow, 1);
+    if(second > 2) displayText("It's a short journey, but ... ", column, 100 + exrow*2, 2);
+    if(second > 3) displayText("I hope you like it :heart:", column, 100 + exrow*3, 3)
   }
+
+  if(second > 4 && second < 15) {
+    if(second > 4) displayText("Bắt đầu từ 27-01-2017", column, 100, 4);
+    if(second > 5) displayText("Hôm nay đã là 07-10-2018 ...", column, 100 + exrow, 5);
+    if(second > 6) displayText("Thế là đã qua ...", column, 100 + exrow*2, 6)
+    if(second > 7) {
+      text(number + " ngày", column, 100 + exrow*3);
+	    if(number >= 365) displayText("là một năm ...", column, 100 + exrow*4, 7);
+      if(number >= 600) displayText("cộng thêm với " + add + " ngày !", column*3 - 30, 100 + exrow*4, 8);
+    }
+  }
+
+  //if(second > 15 && second < 40) {}
 }
 
