@@ -73,7 +73,7 @@ function coutUp() {
   else {number = 618; add = 253;}
 }
 
-function displayText(n, x, y, z) {
+function displayText(string, x, y, z) {
   noStroke();
   fill(255);
   textFont("Amatic SC", 40);
@@ -99,8 +99,8 @@ function textOnScreen() {
   if(time > 900) {
 	  text(number + " ngày", column, 100 + exrow*3);
 	  if(number >= 365) displayText("là một năm ...", column, 100 + exrow*4, 5);
-    if(number >= 600) text("cộng thêm với " + add, column*3 - 30, 100 + exrow*4);
-    if(number == 618) displayText("ngày !", column*5 - 12, 100 + exrow*4, 6);
+    if(number >= 600) displayText("cộng thêm với " + add + " ngày !", column*3 - 30, 100 + exrow*4, 6);
+    //if(number == 618) displayText("ngày !", column*5 - 12, 100 + exrow*4, 6);
   }
 }
 
