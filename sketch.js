@@ -73,7 +73,7 @@ function coutUp() {
   else {number = 618; add = 253;}
 }
 
-function displayText(string, x, y, z) {
+function displayText(n, x, y, z) {
   noStroke();
   fill(255);
   textFont("Amatic SC", 40);
