@@ -106,7 +106,7 @@ function displayOnScreen() {
     }
   }
 
-  if(seconz > 18) image(img[0], 20, 20);
+  if(seconz > 18) image(img[0], 200, 50, img[0].width/3, img[0].height/3);
 
 }
 
