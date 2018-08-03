@@ -47,11 +47,11 @@ function fire() {
   if (random(1) < 0.1) {
     fireworks.push(new Firework());
   }
-  
+
   for (var i = fireworks.length - 1; i >= 0; i--) {
     fireworks[i].update();
     fireworks[i].show();
-    
+
     if (fireworks[i].done()) {
       fireworks.splice(i, 1);
     }
@@ -79,7 +79,7 @@ function displayText(n, x, y, z) {
   textFont("Amatic SC", 40);
   text(n.substring(0, _pos[z]), x, y);
   if(_pos[z] < n.length) _pos[z]++;
-  else _pos[z] = n.length; 
+  else _pos[z] = n.length;
 }
 
 function displayImg(img, x, y) {
@@ -105,8 +105,4 @@ function displayOnScreen() {
       if(number >= 600) displayText("cộng thêm với " + add + " ngày !", column*3 - 30, 100 + exrow*4, 8);
     }
   }
-
-  if(seconz > 18) image(img[0], 200, 50, img[0].width/3, img[0].height/3);
-
 }
-
