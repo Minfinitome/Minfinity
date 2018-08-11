@@ -83,7 +83,7 @@ function displayText(n, x, y, z) {
 }
 
 function displayImg(img, x, y) {
-
+  // hien thi tung pixel 1 | hoac 1 hang pixel 1 :3
 }
 
 function displayOnScreen() {
