@@ -77,8 +77,8 @@ function coutUp() {
 function displayText(n, x, y, z) {
   noStroke(); fill(255);
   textFont("Amatic SC", 40);
-  text(n.substring(0, _pos[z]), x, y);
-  if(_pos[z] < n.length) _pos[z]++;
+  text(n.substring(0, Math.floor(_pos[z])), x, y);
+  if(_pos[z] < n.length) _pos[z] += 0.5;
   else _pos[z] = n.length;
 }
 
