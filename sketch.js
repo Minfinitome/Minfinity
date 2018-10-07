@@ -22,8 +22,8 @@ var column = 100;
 var exrow = 45;
 
 function preload() {
-  song = loadSound("https://mtinfinity.github.io/Minfinity/payday.mp3");
-  img[0] = loadImage("https://mtinfinity.github.io/Minfinity/code.png");
+  song = loadSound("https://tolaaii.github.io/Minfinity/payday.mp3");
+  img[0] = loadImage("https://tolaaii.github.io/Minfinity/code.png");
 }
 
 function setup() {
