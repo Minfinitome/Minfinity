@@ -23,8 +23,8 @@ var column = 100;
 var exrow = 45;
 
 function preload() {
-  song = loadSound("https://tolaaii.github.io/Minfinity/payday.mp3");
-  img = loadImage("https://tolaaii.github.io/Minfinity/heart.png");
+  song = loadSound("https://tolaaii.github.io/tangemyeu/payday.mp3");
+  img = loadImage("https://tolaaii.github.io/tangemyeu/heart.png");
 }
 
 function setup() {
@@ -94,7 +94,7 @@ function displayOnScreen() {
   textFont("Amatic SC", 40); noStroke(); fill(255);
   if(seconz < 4) {
     displayText("Hey ...", column, 100, 0);
-    if(seconz > 1) displayText("Let's start a journey ...", column, 100 + exrow, 1);
+    if(seconz > 1) displayText("Let's go on a journey ...", column, 100 + exrow, 1);
     if(seconz > 2) displayText("It's short, but ... ", column, 100 + exrow*2, 2);
     if(seconz > 2) displayText("I hope you like it :heart:", column, 100 + exrow*3, 3)
   }
@@ -108,35 +108,37 @@ function displayOnScreen() {
 	    if(number >= 365) displayText("là một năm ...", column, 100 + exrow*4, 7);
       if(number >= 600) displayText("cộng thêm với " + add + " ngày !", column*3 - 30, 100 + exrow*4, 8);
     }
+    if(seconz > 16) displayText("(Từ đoạn này trở đi thì em nên xem một mình thôi nhé :D)", column, 100 + exrow*5,99);
   }
 
-  if(seconz < 43) {
+  if(seconz < 34) {
     if(seconz > 19) displayText("Cũng lâu ghê rồi ấy nhỉ :p", column, 100, 9);
-    if(seconz > 22) displayText("Cùng nhau qua bao nhiêu chuyện...", column, 100 + exrow, 10);
-    if(seconz > 25) displayText("mới ngày đầu yêu nhau, còn hơi chút chưa quen...", column, 100 + exrow*2, 11);
-    if(seconz > 28) displayText("sau đó là một chút đi chơi với nhau :D, đi xung quanh bờ hồ, rồi đi khắp phố cổ...", column, 100 + exrow*3, 12);
-    if(seconz > 31) displayText("rồi ôm nhau lần đầu, tiếp theo là first kiss :p", column, 100 + exrow*4, 13);
-    if(seconz > 34) displayText("ngày này năm ngoái cũng thích, được ở cạnh nhau cả ngày...", column, 100 + exrow*5, 14);
-    if(seconz > 37) displayText("nói chung là rất rất nhiều...", column, 100 + exrow*6, 15);
-    if(seconz > 40) displayText("............................................ <3", column, 100 + exrow*7, 16);
+    if(seconz > 21) displayText("Cùng nhau qua bao nhiêu chuyện...", column, 100 + exrow, 10);
+    if(seconz > 23) displayText("mới ngày đầu yêu nhau, còn hơi chút chưa quen...", column, 100 + exrow*2, 11);
+    if(seconz > 25) displayText("sau đó là một chút đi chơi với nhau :D, đi xung quanh bờ hồ, rồi đi khắp phố cổ...", column, 100 + exrow*3, 12);
+    if(seconz > 27) displayText("rồi ôm nhau lần đầu, tiếp theo là first kiss :p", column, 100 + exrow*4, 13);
+    if(seconz > 29) displayText("ngày này năm ngoái cũng thích, được ở cạnh nhau cả ngày...", column, 100 + exrow*5, 14);
+    if(seconz > 31) displayText("nói chung là rất rất nhiều...", column, 100 + exrow*6, 15);
+    if(seconz > 32) displayText("............................................ <3", column, 100 + exrow*7, 16);
   }
 
-  if(seconz < 55) {
-    if(seconz > 43) displayText("Anh chỉ muốn nói rằng:...", column, 100, 17);
-    if(seconz > 46) displayText("Bên cạnh em qua nhiều ngày qua.........", column, 100 + exrow, 18);
-    if(seconz > 49) displayText("anh thấy hạnh phúc lắm đó ^^", column, 100 + exrow*2, 19);
-    if(seconz > 50) displayText("cảm ơn em... và yêu em nhiều lắm <3", column, 100 + exrow*3, 20);
+  if(seconz < 44) {
+    if(seconz > 34) displayText("Anh chỉ muốn nói rằng:...", column, 100, 17);
+    if(seconz > 36) displayText("Bên cạnh em qua nhiều ngày qua.........", column, 100 + exrow, 18);
+    if(seconz > 38) displayText("anh thấy hạnh phúc lắm đó ^^", column, 100 + exrow*2, 19);
+    if(seconz > 40) displayText("cảm ơn em... và yêu em nhiều lắm <3", column, 100 + exrow*3, 20);
+    if(seconz > 40) displayText("<3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3 <3", column, 100 + exrow*4, 30);
   }
 
-  if(seconz < 85) {
-    if(seconz > 55) displayText("Hì......", column, 100, 21);
-    if(seconz > 58) displayText("Quà anh tặng em chỉ nho nhỏ thế thôi,", column, 100 + exrow, 22);
-    if(seconz > 61) displayText("nhưng mà là đồ handmade đó :v", column, 100 + exrow*2, 23);
-    if(seconz > 64) displayText("Mong em thích món quà này ^^ !", column, 100 + exrow*3, 24);
-    if(seconz > 67) displayText("Ò thật ra là món quà có thể to hơn một chút nữa :v", column, 100 + exrow*4, 25);
-    if(seconz > 70) displayText("nhưng mà lúc bắt tay vào làm thì anh cứ bị run out of idea :(", column, 100 + exrow*5, 26);
-    if(seconz > 73) displayText("Hành trình đến đây sắp hết rồi, em chờ thêm khoảng 10 giây nữa nhé :p", column, 100 + exrow*6, 27);
-    if(seconz > 76) displayText("Yêu emm nhiều :p", column, 100 + exrow*7, 28);
+  if(seconz < 60) {
+    if(seconz > 44) displayText("Hì......", column, 100, 21);
+    if(seconz > 46) displayText("Quà anh tặng em chỉ nho nhỏ thế thôi,", column, 100 + exrow, 22);
+    if(seconz > 48) displayText("nhưng mà là đồ handmade đó :v", column, 100 + exrow*2, 23);
+    if(seconz > 50) displayText("Mong em thích món quà này ^^ !", column, 100 + exrow*3, 24);
+    if(seconz > 52) displayText("Ò thật ra là món quà có thể to hơn một chút nữa :v", column, 100 + exrow*4, 25);
+    if(seconz > 54) displayText("nhưng mà lúc bắt tay vào làm thì anh cứ bị run out of idea :(", column, 100 + exrow*5, 26);
+    if(seconz > 56) displayText("Hành trình đến đây sắp hết rồi, em chờ thêm khoảng 10 giây nữa nhé :p", column, 100 + exrow*6, 27);
+    if(seconz > 58) displayText("Yêu emm nhiều :p", column, 100 + exrow*7, 28);
   } else isEnd = true;
 
 }
@@ -144,8 +146,7 @@ function displayOnScreen() {
 function ending() {
   background(255);
   noStroke(); fill(0);
-  textFont("Charmonman", 50);
-  textAlign(CENTER);
+  textFont("Charmonman", 48);
   text("Chúc em sinh nhật thật hạnh phúc <3", column, 100);
-  image(img, 500, 200);
+  image(img, 480, 180);
 }
